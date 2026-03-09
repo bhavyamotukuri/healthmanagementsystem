@@ -1,0 +1,42 @@
+<h2>{{ title }}</h2>
+
+<form (ngSubmit)="submit()" #f="ngForm" class="form">
+  <label>
+    Name *
+    <input type="text" [(ngModel)]="model.name" name="name" required />
+  </label>
+
+  <label>
+    Age *
+    <input type="number" [(ngModel)]="model.age" name="age" required min="0"/>
+  </label>
+
+  <label>
+    Gender *
+    <select [(ngModel)]="model.gender" name="gender" required>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+
+  <label>
+    Height (cm)
+    <input type="number" [(ngModel)]="model.heightCm" name="heightCm" min="0" />
+  </label>
+
+  <label>
+    Weight (kg)
+    <input type="number" [(ngModel)]="model.weightKg" name="weightKg" min="0" />
+  </label>
+
+  <label>
+    Conditions (comma separated)
+    <input type="text" [(ngModel)]="conditionsText" name="conditions" />
+  </label>
+
+  <div class="actions">
+    <button type="submit">{{ title === 'Add Patient' ? 'Create' : 'Update' }}</button>
+    <a routerLink="/">Cancel</a>
+  </div>
+</form>

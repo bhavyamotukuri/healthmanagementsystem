@@ -1,0 +1,44 @@
+.form {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	margin-top: 14px;
+}
+
+label {
+	display: grid;
+	gap: 6px;
+	font-weight: 600;
+	color: var(--muted);
+}
+
+input {
+	border: 1px solid #d6d1f7;
+	border-radius: 10px;
+	padding: 9px 12px;
+	min-width: 160px;
+}
+
+button {
+	border: 0;
+	border-radius: 10px;
+	padding: 10px 14px;
+	font-weight: 700;
+	color: #2f2a57;
+	background: linear-gradient(120deg, #b8b5ff, #a0e7e5);
+	cursor: pointer;
+}
+
+button:hover {
+	filter: brightness(1.05);
+}
+
+.result {
+	margin-top: 16px;
+	border: 1px solid #ddd8ff;
+	background: #f7f4ff;
+	border-radius: 12px;
+	padding: 12px 14px;
+	width: fit-content;
+}

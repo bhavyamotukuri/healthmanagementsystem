@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700&display=swap');
+
+:root {
+	--bg-1: #f7f4ff;
+	--bg-2: #fff8f0;
+	--surface: rgba(255, 255, 255, 0.86);
+	--surface-border: rgba(174, 167, 255, 0.32);
+	--text: #2e2a45;
+	--muted: #6b6786;
+	--primary: #7f74d8;
+	--primary-strong: #665cc4;
+	--accent: #ff9f9f;
+	--danger: #d45b7a;
+	--radius: 14px;
+	--shadow: 0 16px 34px rgba(146, 136, 245, 0.2);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	color: var(--text);
+	background:
+		radial-gradient(circle at 8% 6%, rgba(186, 230, 253, 0.45), transparent 38%),
+		radial-gradient(circle at 92% 4%, rgba(254, 205, 211, 0.5), transparent 34%),
+		radial-gradient(circle at 76% 78%, rgba(221, 214, 254, 0.38), transparent 28%),
+		linear-gradient(140deg, var(--bg-1), var(--bg-2));
+	background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-family: 'Sora', sans-serif;
+	letter-spacing: 0.2px;
+}
+
+a {
+	color: var(--primary);
+}
+
+a:hover {
+	color: var(--primary-strong);
+}
+
+button,
+input,
+select {
+	font: inherit;
+}
