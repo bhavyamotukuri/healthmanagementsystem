@@ -3,10 +3,10 @@
   <a routerLink="/add" class="btn">+ Add Patient</a>
 </div>
 
-<div *ngIf="loading">Loading...</div>
-<div *ngIf="error">{{ error }}</div>
+<div *ngIf="loading">Loading</div>
+<div *ngIf="error">{{error }}</div>
 
-<table *ngIf="!loading && patients.length" class="table">
+<table *ngIf="!loading && patients.length"class="table">
   <thead>
     <tr>
       <th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Ht (cm)</th><th>Wt (kg)</th><th>Conditions</th><th>Actions</th>
@@ -14,13 +14,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let p of patients">
-      <td>{{ p.id }}</td>
-      <td>{{ p.name }}</td>
+      <td>{{p.id }}</td>
+      <td>{{p.name }}</td>
       <td>{{ p.age }}</td>
       <td>{{ p.gender }}</td>
-      <td>{{ p.heightCm || '-' }}</td>
+      <td>{{p.heightCm || '-' }}</td>
       <td>{{ p.weightKg || '-' }}</td>
-      <td>{{ (p.conditions ?? []).join(', ') || '-' }}</td>
+      <td>{{(p.conditions ??[]).join(', ') || '-' }}</td>
       <td>
         <a [routerLink]="['/edit', p.id]">Edit</a>
         <button (click)="delete(p)">Delete</button>
@@ -29,7 +29,7 @@
   </tbody>
 </table>
 
-<p *ngIf="!loading && !patients.length">No patients yet.</p>
+<p *ngIf="!loading && !patients.length">No patients yet</p>
 
 <hr />
 <a routerLink="/bmi">Try BMI Calculator</a>
