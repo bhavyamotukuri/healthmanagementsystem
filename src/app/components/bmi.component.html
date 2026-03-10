@@ -2,19 +2,19 @@
 
 <div class="form">
   <label>
-    Height (cm)
-    <input type="number" [(ngModel)]="heightCm" />
+    Height(cm)
+    <input type="number"[(ngModel)]="heightCm" />
   </label>
 
   <label>
-    Weight (kg)
-    <input type="number" [(ngModel)]="weightKg" />
+    Weight(kg)
+    <input type="number"[(ngModel)]="weightKg"/>
   </label>
 
   <button (click)="calc()">Calculate</button>
 </div>
 
 <div *ngIf="result" class="result">
-  <p><strong>BMI:</strong> {{ result.bmi }}</p>
-  <p><strong>Category:</strong> {{ result.category }}</p>
+  <p><strong>BMI:</strong> {{result.bmi}}</p>
+  <p><strong>Category:</strong> {{result.category }}</p>
 </div>
